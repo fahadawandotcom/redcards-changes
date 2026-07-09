@@ -1,194 +1,238 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #f1f1f1;
-    overflow-x: hidden;
+body {
+    background-color: #ffffff;
 }
 
-.header{
-    margin: 20px 0 10px 20px;
+.header {
+    padding: 20px 40px;
 }
 
-.screen1{
-    background-color: #8c3232;
-    margin: 0 0 1px 20px;
-    height: 100%;
+.header img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.screen1 {
+    background-color: #9c3038;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    padding: 60px 60px 80px 60px;
+    position: relative;
+    overflow: hidden;
 }
 
-.text1{
-    padding: 220px 0 0 10px;
-}
-
-.screen1 h1, h3{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding-left: 100px;
-    padding-right: 5px;
-    margin-bottom: 5px;
-    font-weight: 900;
-}
-
-.screen1 p{
-    padding-left: 100px;
-    font-size: 15px;
-    margin-right: -25%;
-    margin-bottom: 12px;
-}
-
-/* .screen1 h1, p{
-    margin-bottom: 12px;
-} */
-
-.screen1 h1{
-    color: white;
-    font-size: 85px;
-}
-
-.screen1 h3{
-    font-size: 25px;
-
-}
-
-.screen1{
-    display: flex;
-    justify-content: space-between;
-}
-
-.text1{
-    width: 40%;
+/* LEFT TEXT SIDE */
+.text1 {
+    color: #ffffff;
+    max-width: 420px;
+    padding-top: 160px;
     position: relative;
 }
 
-.text1 button{
-    position: absolute;
-    top: 400px;
-    right: -14%;
+.text1 h1 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 25px;
 }
 
-.text1 button:last-child{
-    top: 480px;
-    right: -10%;
+.text1 p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #f1dcdc;
 }
 
-.form2{
-    margin-top: 5%;
-    width: 40%;
-}
-
-/* .textareas{
-    margin-top: 20%;
-} */
-
-
-.form2 input{
-    margin-bottom: 8px;
-    width: 75%;
-    padding: 8px;
-    background-color: #fff;
-    border: 2px solid white;
-    color: white;
-    background-color: transparent;
-}
-
-#checkb{
-    color: rgb(74, 4, 4);
-    margin: 10px 0 0 -180px;
-}
-
-
-/* input[type="checkb"]{
-    margin-left: 10rem;
-} */
-
-#labels{
-    color: white;
-    margin: 10px 0 0 -180px;
-}
-
-.text2{
-    margin: 10px 0 -10px -100px;
-}
-
-.text2 h1{
-    color: black;
-    font-size: 24px;
-}
-
-.text2 p{
-    /* margin-right: 50%; */
-    color: white;
-    font-size: x-small;
-    margin-top: 2px;
-}
-
-.textareas{
-    margin-top: 1%;
-    margin-bottom: 5%;
-    /* margin-right: 2px; */
-    /* background-color: blue; */
-
-}
-
-/* textarea::placeholder{
-    color: white;
-} */
-
-::placeholder{
-    color: white;
-    line-height: 0.3em;
-}
-
-.form2 textarea{
-    border: 2px solid white;
-    background-color: #8c3232;
-    /* margin-top: 20%; */
-    width: 75%;
-    margin: 14px 0 0 0;
-    padding: 12px;
-    color: white;
-}
-
-.msb{
-    margin: 5% 0 1% 0;
-}
-
-button{
-    display: inline-flex;
-    height: 44px;
-    width: 68%;
-    outline: none;
-    overflow: hidden;
-    align-items: center;
-    padding-left: 30px;
-    font-size: 22px;
-}
-
-
-.psb{
-    padding: 0;
-    color: rgb(0, 0, 0);
-    margin-left: 10%;
-    font-weight: bold;
+.text1 h3 {
     font-size: 20px;
-    height: 15px;
-    width: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
 }
 
-#btns-1{
-    margin-left: 20%;
+/* small decorative squares floating near text (from screenshot) —
+   positioned absolutely relative to .text1's padding box so they sit
+   just off the paragraph and the "Applications close" line */
+.text1 .psb {
+    width: 14px;
+    height: 14px;
+    background-color: #f4d9d9;
+    border: none;
+    position: absolute;
 }
 
-#btns-2{
-    margin-left: 15%;
+.text1 .psb:nth-of-type(1) {
+    top: 293px;
+    left: 377px;
 }
 
-.bottom{
-    width: 20px;
-    height: 1px;
+.text1 .psb:nth-of-type(2) {
+    top: 360px;
+    left: 362px;
+}
+
+/* RIGHT FORM SIDE */
+.form2 {
+    background-color: transparent;
+    width: 100%;
+    max-width: 480px;
+}
+
+.form2 form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form2 input[type="text"] {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 16px 18px;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+
+.form2 input[type="text"]::placeholder {
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.text2 {
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.text2 h1 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.text2 p {
+    font-size: 12px;
+    color: #f1dcdc;
+    line-height: 1.5;
+}
+
+/* Award checkboxes + textareas */
+.textareas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.textareas > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+}
+
+.textareas input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #ffffff;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.textareas label {
+    font-size: 14px;
+    font-weight: 600;
+    flex-grow: 1;
+}
+
+/* small square button beside each award label (decorative, per screenshot) */
+.textareas .psb {
+    width: 14px;
+    height: 14px;
+    background-color: #f4d9d9;
+    border: none;
+    flex-shrink: 0;
+}
+
+.textareas textarea {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 14px 16px;
+    font-size: 13px;
+    width: 100%;
+    resize: vertical;
+    outline: none;
+    font-family: inherit;
+}
+
+.textareas textarea::placeholder {
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+/* Submit button */
+.msb {
+    margin-top: 10px;
+}
+
+.msb button {
+    background-color: #ffffff;
+    color: #9c3038;
+    border: none;
+    padding: 16px 30px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.msb pre {
+    font-family: inherit;
+    font-weight: 700;
+}
+
+/* decorative bottom-right triangle fold, per screenshot */
+.bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 90px 90px;
+    border-color: transparent transparent #ffffff transparent;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .screen1 {
+        flex-direction: column;
+        padding: 40px 25px 60px 25px;
+    }
+
+    .text1 {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .form2 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text1 h1 {
+        font-size: 40px;
+    }
+
+    .text2 h1 {
+        font-size: 22px;
+    }
 }
