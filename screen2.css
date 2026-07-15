@@ -1,11 +1,14 @@
-* {
+*{
+    width:100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
+html,
 body {
+    height: 100%;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
@@ -13,16 +16,17 @@ body {
 
 .phone {
     width: 100%;
-    max-width: 460px;
     background-color: #ffffff;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
 }
 
 /* ================= HERO ================= */
 .hero {
-    background-color: #94262e;
+    background-color: #a1232c;
     color: #ffffff;
-    padding: 25px 25px 70px 25px;
+    padding: 55px 55px 70px 55px;
     position: relative;
     overflow: hidden;
 }
